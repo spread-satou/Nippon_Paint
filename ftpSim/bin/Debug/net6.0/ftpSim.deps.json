@@ -1,0 +1,26 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ftpSim/1.0.0": {
+        "dependencies": {
+          "ftpDLL": "1.0.0"
+        },
+        "runtime": {
+          "ftpSim.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ftpSim/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

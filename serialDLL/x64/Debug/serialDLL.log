@@ -1,0 +1,17 @@
+﻿  pch.cpp
+  ccmmsg.cpp
+  ccm.cpp
+  comport.cpp
+  dbglog.cpp
+  dllmain.cpp
+  ecode.cpp
+  params.cpp
+  serialParams.cpp
+  thr_semaphore.cpp
+  util_ccmstr.cpp
+  util_file.cpp
+  util_strtok.cpp
+  winec.cpp
+  コードを生成中...
+     ライブラリ C:\Users\satou\Documents\GitHub\nippon_paint\x64\Debug\serialDLL.lib とオブジェクト C:\Users\satou\Documents\GitHub\nippon_paint\x64\Debug\serialDLL.exp を作成中
+  serialDLL.vcxproj -> C:\Users\satou\Documents\GitHub\nippon_paint\x64\Debug\serialDLL.dll
