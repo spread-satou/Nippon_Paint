@@ -1,0 +1,63 @@
+2022/04/25 18:11:54.835	OrderManager	情報	データベースの読み込みを実行しました（SQL：SELECT Status AS Status ,Order_id AS Order_id ,HG_HG_Delivery_Code AS 運送区分 ,TRIM(TRIM('　' FROM HG_HG_Shipping_ID)) AS 配送ﾓｰﾄﾞ ,TRIM(TRIM('　' FROM Product_Code)) AS 製品ｺｰﾄﾞ ,TRIM(TRIM('　' FROM HG_Product_Name)) AS 品名 ,TRIM(TRIM('　' FROM HG_Volume_Code)) AS 容量ｺｰﾄﾞ ,Number_of_cans AS 缶数 ,TRIM(TRIM('　' FROM FORMAT(Extimated_Date,'MM/dd'))) AS SS出荷予定日 ,TRIM(TRIM('　' FROM Operator_Name)) AS 担当者 ,TRIM(TRIM('　' FROM FORMAT(Delivery_Date,'MM/dd'))) AS 納期 ,TRIM(TRIM('　' FROM HG_Color_Sample)) AS 標準色見本 ,TRIM(TRIM('　' FROM Color_Name)) AS 色名 FROM Orders WHERE HG_SS_Code = '51F' AND Status IN (0, 1, 2, 3, 4)ORDER BY   Status  ,HG_HG_Delivery_Code ）
+2022/04/25 18:11:54.837	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 18:11:54.839	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 18:11:54.839	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 18:11:54.840	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 18:11:54.844	OrderManager	情報	主画面の初期化を完了しました
+2022/04/25 18:11:54.870	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 18:11:54.885	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 18:11:56.936	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 18:11:56.937	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 18:11:56.968	OrderManager	情報	主画面を開きました
+2022/04/25 18:11:58.910	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 18:11:58.931	OrderManager	情報	データベースの読み込みを実行しました（SQL：SELECT * FROM Orders WHERE order_id = @orderId）
+2022/04/25 18:11:58.994	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 18:11:59.000	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 18:11:59.013	OrderManager	情報	データベースの読み込みを実行しました（SQL：SELECT * FROM Orders WHERE order_id = @orderId）
+2022/04/25 18:11:59.015	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 18:11:59.016	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 18:11:59.024	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 18:11:59.034	OrderManager	情報	データベースの読み込みを実行しました（SQL：SELECT * FROM Orders WHERE order_id = @orderId）
+2022/04/25 18:11:59.036	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:19.579	OrderManager	情報	データベースの読み込みを実行しました（SQL：SELECT Status AS Status ,Order_id AS Order_id ,HG_HG_Delivery_Code AS 運送区分 ,TRIM(TRIM('　' FROM HG_HG_Shipping_ID)) AS 配送ﾓｰﾄﾞ ,TRIM(TRIM('　' FROM Product_Code)) AS 製品ｺｰﾄﾞ ,TRIM(TRIM('　' FROM HG_Product_Name)) AS 品名 ,TRIM(TRIM('　' FROM HG_Volume_Code)) AS 容量ｺｰﾄﾞ ,Number_of_cans AS 缶数 ,TRIM(TRIM('　' FROM FORMAT(Extimated_Date,'MM/dd'))) AS SS出荷予定日 ,TRIM(TRIM('　' FROM Operator_Name)) AS 担当者 ,TRIM(TRIM('　' FROM FORMAT(Delivery_Date,'MM/dd'))) AS 納期 ,TRIM(TRIM('　' FROM HG_Color_Sample)) AS 標準色見本 ,TRIM(TRIM('　' FROM Color_Name)) AS 色名 FROM Orders WHERE HG_SS_Code = '51F' AND Status IN (0, 1, 2, 3, 4)ORDER BY   Status  ,HG_HG_Delivery_Code ）
+2022/04/25 20:01:19.581	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:19.584	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:19.585	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:19.585	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:19.591	OrderManager	情報	主画面の初期化を完了しました
+2022/04/25 20:01:19.628	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:19.650	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:22.002	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:22.002	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:22.043	OrderManager	情報	主画面を開きました
+2022/04/25 20:01:24.021	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:24.035	OrderManager	情報	データベースの読み込みを実行しました（SQL：SELECT * FROM Orders WHERE order_id = @orderId）
+2022/04/25 20:01:24.116	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:24.123	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:24.131	OrderManager	情報	データベースの読み込みを実行しました（SQL：SELECT * FROM Orders WHERE order_id = @orderId）
+2022/04/25 20:01:24.132	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:24.132	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:24.138	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:24.145	OrderManager	情報	データベースの読み込みを実行しました（SQL：SELECT * FROM Orders WHERE order_id = @orderId）
+2022/04/25 20:01:24.146	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:28.962	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:29.391	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:29.719	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:31.123	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:31.131	OrderManager	情報	データベースの読み込みを実行しました（SQL：SELECT * FROM Orders WHERE order_id = @orderId）
+2022/04/25 20:01:31.729	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:31.738	OrderManager	情報	データベースの読み込みを実行しました（SQL：SELECT * FROM Orders WHERE order_id = @orderId）
+2022/04/25 20:01:32.221	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:32.240	OrderManager	情報	データベースの読み込みを実行しました（SQL：SELECT * FROM Orders WHERE order_id = @orderId）
+2022/04/25 20:01:32.561	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:32.569	OrderManager	情報	データベースの読み込みを実行しました（SQL：SELECT * FROM Orders WHERE order_id = @orderId）
+2022/04/25 20:01:32.928	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:32.938	OrderManager	情報	データベースの読み込みを実行しました（SQL：SELECT * FROM Orders WHERE order_id = @orderId）
+2022/04/25 20:01:33.482	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:33.490	OrderManager	情報	データベースの読み込みを実行しました（SQL：SELECT * FROM Orders WHERE order_id = @orderId）
+2022/04/25 20:01:34.057	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:34.065	OrderManager	情報	データベースの読み込みを実行しました（SQL：SELECT * FROM Orders WHERE order_id = @orderId）
+2022/04/25 20:01:34.438	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:34.453	OrderManager	情報	データベースの読み込みを実行しました（SQL：SELECT * FROM Orders WHERE order_id = @orderId）
+2022/04/25 20:01:34.785	OrderManager	情報	ボタンをクリックしました（機能：{0}）
+2022/04/25 20:01:34.794	OrderManager	情報	データベースの読み込みを実行しました（SQL：SELECT * FROM Orders WHERE order_id = @orderId）

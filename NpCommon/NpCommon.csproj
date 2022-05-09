@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{38C0C8D0-5E89-449A-8F70-0D58D64C70EC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NipponPaint.NpCommon</RootNamespace>
+    <AssemblyName>NpCommon</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\AttributeUtility.cs" />
+    <Compile Include="Attributes\DatabaseFieldAttribute.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Database\ParameterItem.cs" />
+    <Compile Include="Database\SqlBase.cs" />
+    <Compile Include="Database\Sql\NpMain\Colors.cs" />
+    <Compile Include="Database\Sql\NpMain\Delivery.cs" />
+    <Compile Include="Database\Sql\NpMain\HgLog.cs" />
+    <Compile Include="Database\Sql\NpMain\MainSet.cs" />
+    <Compile Include="Database\Sql\NpMain\Operators.cs" />
+    <Compile Include="Database\Sql\NpMain\Orders.cs" />
+    <Compile Include="Database\Sql\NpMain\Plants.cs" />
+    <Compile Include="Database\Sql\NpMain\PlantsSettings.cs" />
+    <Compile Include="Database\Sql\NpMain\ProductNoMaster.cs" />
+    <Compile Include="Database\Sql\NpMain\VarietyCode.cs" />
+    <Compile Include="Database\Sql\Order\CanTypes.cs" />
+    <Compile Include="Database\Sql\Order\CapTypes.cs" />
+    <Compile Include="Database\Sql\Order\Defaults.cs" />
+    <Compile Include="Database\Sql\Order\Formal.cs" />
+    <Compile Include="Database\Sql\Order\LabelEdit.cs" />
+    <Compile Include="Database\Sql\Order\LabelSelections.cs" />
+    <Compile Include="Database\Sql\SupervisorPc\Func.cs" />
+    <Compile Include="Database\Sql\SupervisorPc\MergeItemDefine.cs" />
+    <Compile Include="Database\Sql\SupervisorPc\TbBarcode.cs" />
+    <Compile Include="Database\Sql\SupervisorPc\TbFormula.cs" />
+    <Compile Include="Database\Sql\SupervisorPc\TbJob.cs" />
+    <Compile Include="Data\SupervisorPc\TbBarcode.cs" />
+    <Compile Include="Data\SupervisorPc\TbFormura.cs" />
+    <Compile Include="Data\SupervisorPc\TbJob.cs" />
+    <Compile Include="EnumExtensions.cs" />
+    <Compile Include="FormControls\CheckTextButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\CheckTextButton.Designer.cs">
+      <DependentUpon>CheckTextButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\ComboBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormControls\ComboBoxEx.Designer.cs">
+      <DependentUpon>ComboBoxEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\DateTimePickerEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormControls\DateTimePickerEx.Designer.cs">
+      <DependentUpon>DateTimePickerEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\LabelTextButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\LabelTextButton.Designer.cs">
+      <DependentUpon>LabelTextButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\PanelBorder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\PanelBorder.Designer.cs">
+      <DependentUpon>PanelBorder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\TabPageEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormControls\TabPageEx.Designer.cs">
+      <DependentUpon>TabPageEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\TextBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormControls\TextBoxEx.Designer.cs">
+      <DependentUpon>TextBoxEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\DeliveryClassification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\DeliveryClassification.Designer.cs">
+      <DependentUpon>DeliveryClassification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\DialogEditButtons.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\DialogEditButtons.Designer.cs">
+      <DependentUpon>DialogEditButtons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\LabelCheckBoxSingle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\LabelCheckBoxSingle.Designer.cs">
+      <DependentUpon>LabelCheckBoxSingle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\LabelCodeText.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\LabelCodeText.Designer.cs">
+      <DependentUpon>LabelCodeText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\LabelColorDiaLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\LabelColorDiaLog.Designer.cs">
+      <DependentUpon>LabelColorDiaLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\LabelDateTimePicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\LabelDateTimePicker.Designer.cs">
+      <DependentUpon>LabelDateTimePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\LabelDropDown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\LabelDropDown.Designer.cs">
+      <DependentUpon>LabelDropDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\LabelNumericUpDown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\LabelNumericUpDown.Designer.cs">
+      <DependentUpon>LabelNumericUpDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\LabelNumericUpDownMulti.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\LabelNumericUpDownMulti.Designer.cs">
+      <DependentUpon>LabelNumericUpDownMulti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\LabelRadioButtons.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\LabelRadioButtons.Designer.cs">
+      <DependentUpon>LabelRadioButtons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\LabelTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\LabelTextBox.Designer.cs">
+      <DependentUpon>LabelTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\LabelTextBoxDb.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\LabelTextBoxDb.Designer.cs">
+      <DependentUpon>LabelTextBoxDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\LampText.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\LampText.Designer.cs">
+      <DependentUpon>LampText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\TabCtrlPagePlants.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\TabCtrlPagePlants.Designer.cs">
+      <DependentUpon>TabCtrlPagePlants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\TabCtrlPagePlantsSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\TabCtrlPagePlantsSetting.Designer.cs">
+      <DependentUpon>TabCtrlPagePlantsSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Funcs.cs" />
+    <Compile Include="IniFile\ReadFile.cs" />
+    <Compile Include="IniFile\Sections\DatabaseSection.cs" />
+    <Compile Include="IniFile\Sections\GridSection.cs" />
+    <Compile Include="IniFile\Sections\PrinterSection.cs" />
+    <Compile Include="IniFile\Settings.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="Messages.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sentence.cs" />
+    <Compile Include="Settings\GridViewSetting.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormControls\CheckTextButton.resx">
+      <DependentUpon>CheckTextButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\LabelTextButton.resx">
+      <DependentUpon>LabelTextButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\PanelBorder.resx">
+      <DependentUpon>PanelBorder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\TabPageEx.resx">
+      <DependentUpon>TabPageEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\TextBoxEx.resx">
+      <DependentUpon>TextBoxEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\DeliveryClassification.resx">
+      <DependentUpon>DeliveryClassification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\DialogEditButtons.resx">
+      <DependentUpon>DialogEditButtons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\LabelCheckBoxSingle.resx">
+      <DependentUpon>LabelCheckBoxSingle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\LabelCodeText.resx">
+      <DependentUpon>LabelCodeText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\LabelColorDiaLog.resx">
+      <DependentUpon>LabelColorDiaLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\LabelDateTimePicker.resx">
+      <DependentUpon>LabelDateTimePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\LabelDropDown.resx">
+      <DependentUpon>LabelDropDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\LabelNumericUpDown.resx">
+      <DependentUpon>LabelNumericUpDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\LabelNumericUpDownMulti.resx">
+      <DependentUpon>LabelNumericUpDownMulti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\LabelRadioButtons.resx">
+      <DependentUpon>LabelRadioButtons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\LabelTextBox.resx">
+      <DependentUpon>LabelTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\LabelTextBoxDb.resx">
+      <DependentUpon>LabelTextBoxDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\LampText.resx">
+      <DependentUpon>LampText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\TabCtrlPagePlants.resx">
+      <DependentUpon>TabCtrlPagePlants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\TabCtrlPagePlantsSetting.resx">
+      <DependentUpon>TabCtrlPagePlantsSetting.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NpCommon.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "serialApp": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

@@ -1,0 +1,15 @@
+C:\share\nipponpaint\3.pg\serialDLL\serialApp\serialApp\bin\Release\net6.0\serialApp.exe
+C:\share\nipponpaint\3.pg\serialDLL\serialApp\serialApp\bin\Release\net6.0\serialApp.deps.json
+C:\share\nipponpaint\3.pg\serialDLL\serialApp\serialApp\bin\Release\net6.0\serialApp.runtimeconfig.json
+C:\share\nipponpaint\3.pg\serialDLL\serialApp\serialApp\bin\Release\net6.0\serialApp.dll
+C:\share\nipponpaint\3.pg\serialDLL\serialApp\serialApp\bin\Release\net6.0\serialApp.pdb
+C:\share\nipponpaint\3.pg\serialDLL\serialApp\serialApp\obj\Release\net6.0\serialApp.csproj.AssemblyReference.cache
+C:\share\nipponpaint\3.pg\serialDLL\serialApp\serialApp\obj\Release\net6.0\serialApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\share\nipponpaint\3.pg\serialDLL\serialApp\serialApp\obj\Release\net6.0\serialApp.AssemblyInfoInputs.cache
+C:\share\nipponpaint\3.pg\serialDLL\serialApp\serialApp\obj\Release\net6.0\serialApp.AssemblyInfo.cs
+C:\share\nipponpaint\3.pg\serialDLL\serialApp\serialApp\obj\Release\net6.0\serialApp.csproj.CoreCompileInputs.cache
+C:\share\nipponpaint\3.pg\serialDLL\serialApp\serialApp\obj\Release\net6.0\serialApp.dll
+C:\share\nipponpaint\3.pg\serialDLL\serialApp\serialApp\obj\Release\net6.0\refint\serialApp.dll
+C:\share\nipponpaint\3.pg\serialDLL\serialApp\serialApp\obj\Release\net6.0\serialApp.pdb
+C:\share\nipponpaint\3.pg\serialDLL\serialApp\serialApp\obj\Release\net6.0\serialApp.genruntimeconfig.cache
+C:\share\nipponpaint\3.pg\serialDLL\serialApp\serialApp\obj\Release\net6.0\ref\serialApp.dll

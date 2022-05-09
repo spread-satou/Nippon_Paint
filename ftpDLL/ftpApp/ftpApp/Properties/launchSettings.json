@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ftpApp": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

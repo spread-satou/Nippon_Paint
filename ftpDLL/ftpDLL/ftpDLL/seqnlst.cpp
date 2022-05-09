@@ -1,0 +1,295 @@
+﻿#include "pch.h"
+#include "seqnlst.h"
+#include "ftplog.h"
+
+#include "params.h"
+#include "thr_launcher.h"
+#include "thr_semaphore.h"
+//#include "def_dbg.h"
+
+#include "winec.h"
+#include "ecode.h"
+#include "reply.h"
+#include "ftpcmd.h"
+#include "seqpasv.h"
+
+#include <sstream>
+#include <iostream>
+
+//! グローバルオブジェクト
+extern params   sharedObj;
+
+//! 外部宣言
+extern HANDLE create_thr(int siNAME, void* pArgs);
+extern int wait_hthr_release(HANDLE hThread);
+extern int sem_init(int siSEMID, LONG lInitialCount, LONG lMaximumCount);
+extern int sem_wait(int siSEMID, DWORD dwMaxms, DWORD dwMilliseconds);
+extern int sem_post(int siSEMID);
+
+seqnlst::seqnlst()
+{
+    this->initialize();
+}
+
+seqnlst::seqnlst(ftpsocket* ptranSOCKET, ftpsocket* pSOCKET)
+{
+	int                 rc = RET_SUCCESS;
+	ecode*              pec= (ecode*)0;
+
+    if (pSOCKET == (ftpsocket*)0) {
+		pec = new ecode(ecode::eVALUE::eARG_NULL, __FUNCTION__, "pSOCKET == 0");
+		pec->output();
+		rc = pec->rc();						            // 戻り値に変換
+        delete pec;
+        throw rc;                                       // コンストラクタは戻り値がないので。
+    }
+
+    this->initialize();
+    mpSOCKET[ESOCK::eCTRL] = pSOCKET;
+    mpSOCKET[ESOCK::eTRAN] = ptranSOCKET;
+}
+
+seqnlst::~seqnlst()
+{
+
+}
+
+/*!
+ * @file		seqnlst.cpp
+ * @fn			int seqnlst::initialize(void)
+ * @brief		メンバ変数初期化
+ * @details		デフォルト値設定
+ * @return		0 <  Return value: TBD
+ * 				0 == Return value: 成功
+ * 				0 >  Return value: TBD
+ * @param[in]	void
+ * @date		2022/4/8
+ * @note		initialize()は制御系の初期化
+ */
+int seqnlst::initialize(void)
+{
+    this->variables();
+    this->mmyState = ESTATE::eNLST;
+    return RET_SUCCESS;
+}
+
+/*!
+ * @file		seqnlst.cpp
+ * @fn			int seqnlst::variables(void)
+ * @brief		メンバ変数初期化
+ * @details		無効値(INVALID)をセット
+ * @return		0 <  Return value: TBD
+ * 				0 == Return value: 成功
+ * 				0 >  Return value: TBD
+ * @param[in]	void
+ * @date		2022/3/16
+ * @note		initialize()は制御系の初期化
+ */
+int seqnlst::variables(void)
+{
+    //ftpseq::variables();                              // コンストラクタでcall済
+    return RET_SUCCESS;
+}
+
+/*!
+ * @file            seqnlst.cpp
+ * @fn              seqnlst::enter(void* pArgs)
+ * @brief           シーケンスまえ処理
+ * @details         TBD
+ * @return          0 <  VALUE: TBD
+ *                  0 == VALUE: TBD
+ *                  0 >  VALUE: 状態遷移コード
+ * @date            2022/3/9
+ * @note            ***
+ */
+int seqnlst::enter(void* pArgs)
+{
+	int                 rc = (int)this->mmyState;
+    std::string         str_dir = sharedObj.mstrSrvDir[EPRM_SRVDIR::eORDER];
+    std::string         str_cmd = "";
+    std::string         str_rsp = "";
+    // new, delete
+	ftpcmd*             pcdup = (ftpcmd*)0;
+	ftpcmd*             pcwd  = (ftpcmd*)0;
+ 
+	pcdup = new ftpcmd(mpSOCKET, "CDUP\x0d\x0a");
+	if (pcdup == (ftpcmd*)0) {
+		ecode	retobj(ecode::eVALUE::eNEW, __FUNCTION__, "0 = new ftpcmd(mpSOCKET, CDUP)");
+		retobj.output();
+		rc = retobj.rc();								// 戻り値に変換
+		goto EXIT_FUNCTION;
+	}
+
+    rc = pcdup->group1(str_rsp, (void*)0);              // CDUP
+    if (rc < 0) {
+		goto EXIT_FUNCTION;
+    }
+
+    rc = pcdup->group1(str_rsp, (void*)0);              // CDUP
+    if (rc < 0) {
+		goto EXIT_FUNCTION;
+    }
+
+#ifdef DBGPRT
+    {   //DEBUG
+        std::string     str_rsp = "";
+        ftpcmd*         pcmd = (ftpcmd*)0;
+
+        pcmd = new ftpcmd(mpSOCKET, "PWD\x0d\x0a");
+        if (pcmd == (ftpcmd*)0) {
+            ecode	retobj(ecode::eVALUE::eNEW, __FUNCTION__, "0 = new ftpcmd(mpSOCKET, PWD)");
+            retobj.output();
+            rc = retobj.rc();							// 戻り値に変換
+        }
+        rc = pcmd->group1(str_rsp, (void*)0);
+        delete pcmd;
+    }
+#endif
+    str_cmd = "CWD " + str_dir + "\x0d\x0a";
+    pcwd = new ftpcmd(mpSOCKET, str_cmd.c_str()/*"CWD SND/ORDER\x0d\x0a"*/);
+	if (pcwd == (ftpcmd*)0) {
+		ecode	retobj(ecode::eVALUE::eNEW, __FUNCTION__, "0 = new ftpcmd(mpSOCKET, CWD SND/ORDER)");
+		retobj.output();
+		rc = retobj.rc();								// 戻り値に変換
+		goto EXIT_FUNCTION;
+	}
+
+    /*
+     * CHANGE WORKING DIRECTORY (CWD)
+     */
+	rc = pcwd->group1(str_rsp, (void*)0);               // CWD
+	if (rc < 0) {
+		goto EXIT_FUNCTION;
+	}
+
+EXIT_FUNCTION:
+    if (pcdup) {delete pcdup;}
+    if (pcwd) {delete pcwd;}
+
+    if (rc < 0) {throw rc;}
+    return (int)this->mmyState;
+}
+
+/*!
+ * @file          seqnlst.cpp
+ * @fn            seqnlst::exec(void* pArgs)
+ * @brief         コマンド処理
+ * @details       PORTコマンド送信
+ * @return        0 <  VALUE: 異常終了(再起動シーケンス)
+ *                0 >= VALUE: 状態遷移コード(0～n)
+ * @date          2022/3/28
+ * @note          TBD: RFC959 failure時のリトライ処理
+ */
+int seqnlst::exec(void* pArgs)
+{
+	int				    rc	= RET_SUCCESS;
+    HANDLE              hthr= (HANDLE)(-1L);
+    int                 ret_sem = 0;
+
+    std::string         str_rsp = "";
+    //unsigned short      u16port;
+    // new, delete
+	ecode*			    pec = (ecode*)0;
+	ftpcmd*             pnlst = (ftpcmd*)0;
+
+    LOGTRACE(ECTRL::eWH, ERANK::eDBG, ENAME::eNLST, ">>>\n");
+    /*
+     * まえ処理
+     */
+    pnlst = new ftpcmd(mpSOCKET, "NLST *.*\x0d\x0a");
+	if (pnlst == (ftpcmd*)0) {
+		ecode	retobj(ecode::eVALUE::eNEW, __FUNCTION__, "0 = new ftpcmd(mpSOCKET, NLST *.*)");
+		retobj.output();
+		rc = retobj.rc();								// 戻り値に変換
+		goto EXIT_FUNCTION;
+	}
+
+    //
+    // ■ NLST *.*
+    //
+    //u16port = mpSOCKET[ESOCK::eTRAN]->mu16PORT;         // 現在値参照
+    //u16port++;
+    //if (u16port == 0) {                                 // オーバーフローしたなら、
+    //    u16port = SOCPORT_LOCAL;                        // プライベートポート番号の初期値をセット
+    //}
+
+    // 直前に通信障害が発生して、セマフォがカーネルに返却済かもしれないので、ここで獲得しておく。
+    // 次のセマフォ待ちでは、バックグラウンドでpostするまで、待たされるはず。
+    LOGTRACE(ECTRL::eWH, ERANK::eDBG, ENAME::eNLST, "sem_wait(100,1)\n");
+                                                        // DBGCOUT("sem_wait(100,1)\n");
+    ::sem_wait(ESEMID::eFGBG, 100, 1);                  // max100ms待ち。1msだとセマフォ獲得できずにreturnされるかも。
+    hthr = ::create_thr(ETHRNAME::eNLST, mpSOCKET[ESOCK::eTRAN]);
+
+    LOGTRACE(ECTRL::eWH, ERANK::eDBG, ENAME::eNLST, "sem_wait(%d,%d,1)\n", ESEMID::eFGBG, SEM_TIMEOUT);
+                                                        // DBGCOUT("sem_wait()\n");
+    ret_sem = ::sem_wait(ESEMID::eFGBG, SEM_TIMEOUT, 1);// サーバーからのlisten()待ち
+    if (ret_sem < 0) {                                  // バックグラウンドでフリーズしている
+        //mpSOCKET[ESOCK::eTRAN]->disconnect(SOCTRAN::eLISTEN);
+        mpSOCKET[ESOCK::eTRAN]->release(SOCTRAN::eLISTEN);
+
+		pec = new ecode(ecode::eVALUE::eSEM_TMO, __FUNCTION__, "0 > sem_wait(ESEMID::eFGBG, SEM_TIMEOUT, 1)");
+		pec->output();
+		rc = pec->rc();						            // 戻り値に変換
+        goto EXIT_FUNCTION;
+    }
+
+    // backgroundでは、更新前のPORT番号が必要
+    LOGTRACE(ECTRL::eWH, ERANK::eDBG, ENAME::eNLST, "NLST *.*\n");
+                                                        //DBGCOUT("NLST *.*\n");
+	rc = pnlst->group2(str_rsp, (void*)0);              // NLST
+
+    // サーバーaccept()完了待ち
+    LOGTRACE(ECTRL::eWH, ERANK::eDBG, ENAME::eNLST, "NLEST->sem_wait(%d,%d,1)\n", ESEMID::eFGBG, SEM_TIMEOUT);
+                                                        //DBGCOUT("NLEST->sem_wait()\n");
+    ret_sem = ::sem_wait(ESEMID::eFGBG, SEM_TIMEOUT, 1);// サーバーaccept()待ち(1msecポーリング)
+    if (ret_sem < 0) {                                  // バックグラウンドでフリーズしている
+        //mpSOCKET[ESOCK::eTRAN]->disconnect(SOCTRAN::eLISTEN);
+        mpSOCKET[ESOCK::eTRAN]->release(SOCTRAN::eLISTEN);
+
+		pec = new ecode(ecode::eVALUE::eSEM_TMO, __FUNCTION__, "0 > sem_wait(ESEMID::eFGBG, SEM_TIMEOUT, 1)");
+		pec->output();
+		rc = pec->rc();						            // 戻り値に変換
+        goto EXIT_FUNCTION;
+    }
+
+    // NLST結果判定 sem_wait()成功時のgroup2()失敗。原因不明。
+	if (rc < 0) {
+		goto EXIT_FUNCTION;
+	}
+    // 2022.3.30 PORT番号更新はバックグラウンドで行う(通信異常時にも更新)
+    // backgroundでは、更新前のPORT番号が必要
+    // NLEST正常送信後にPORT更新
+    //mpSOCKET[ESOCK::eTRAN]->mu16PORT = u16port;
+
+    LOGTRACE(ECTRL::eWH, ERANK::eDBG, ENAME::eNLST, "sem_wait()->sem_wait(%d,%d)\n", ESEMID::eFGBG, SEM_TIMEOUT);
+                                                        // DBGCOUT("sem_wait()->wait_hthr_release()\n");
+    ::sem_wait(ESEMID::eFGBG, SEM_TIMEOUT, 1);          // thread exit待ち(1msecポーリング)
+
+EXIT_FUNCTION:
+    LOGTRACE(ECTRL::eWH, ERANK::eDBG, ENAME::eNLST, "sem_wait()->wait_hthr_release(%lld)\n", (long long int)hthr);
+                                                        // DBGCOUT("sem_wait()->wait_hthr_release()\n");
+    if (hthr != (HANDLE)(-1L)) { ::wait_hthr_release(hthr); }
+                                                        // THREADリソース解放
+	if (pec) {delete pec;} 
+	if (pnlst) {delete pnlst;}
+
+    LOGTRACE(ECTRL::eWH, ERANK::eDBG, ENAME::eNLST, "<<< %d\n", rc);
+    if (rc < 0) {throw rc;}
+    return (int)this->mmyState;
+}
+
+/*!
+ * @file          seqnlst.cpp
+ * @fn            int seqnlst::exit(void* pArgs)
+ * @brief         シーケンスあと処理
+ * @details       TBD
+ * @return        0 <  VALUE: シーケンス中断(TBD)
+ *                0 == VALUE: 状態遷移コード(TBD)
+ *                0 >  VALUE: 状態遷移コード
+ * @date          2022/3/15
+ * @note          ***
+ */
+int seqnlst::exit(void* pArgs)
+{
+    return ESTATE::ePORT;
+}

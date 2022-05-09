@@ -1,0 +1,15 @@
+C:\share\nipponpaint\3.pg\ftpDLL\ftpSim\ftpSim\bin\Debug\net6.0\ftpSim.exe
+C:\share\nipponpaint\3.pg\ftpDLL\ftpSim\ftpSim\bin\Debug\net6.0\ftpSim.deps.json
+C:\share\nipponpaint\3.pg\ftpDLL\ftpSim\ftpSim\bin\Debug\net6.0\ftpSim.runtimeconfig.json
+C:\share\nipponpaint\3.pg\ftpDLL\ftpSim\ftpSim\bin\Debug\net6.0\ftpSim.dll
+C:\share\nipponpaint\3.pg\ftpDLL\ftpSim\ftpSim\bin\Debug\net6.0\ftpSim.pdb
+C:\share\nipponpaint\3.pg\ftpDLL\ftpSim\ftpSim\obj\Debug\net6.0\ftpSim.csproj.AssemblyReference.cache
+C:\share\nipponpaint\3.pg\ftpDLL\ftpSim\ftpSim\obj\Debug\net6.0\ftpSim.GeneratedMSBuildEditorConfig.editorconfig
+C:\share\nipponpaint\3.pg\ftpDLL\ftpSim\ftpSim\obj\Debug\net6.0\ftpSim.AssemblyInfoInputs.cache
+C:\share\nipponpaint\3.pg\ftpDLL\ftpSim\ftpSim\obj\Debug\net6.0\ftpSim.AssemblyInfo.cs
+C:\share\nipponpaint\3.pg\ftpDLL\ftpSim\ftpSim\obj\Debug\net6.0\ftpSim.csproj.CoreCompileInputs.cache
+C:\share\nipponpaint\3.pg\ftpDLL\ftpSim\ftpSim\obj\Debug\net6.0\ftpSim.dll
+C:\share\nipponpaint\3.pg\ftpDLL\ftpSim\ftpSim\obj\Debug\net6.0\refint\ftpSim.dll
+C:\share\nipponpaint\3.pg\ftpDLL\ftpSim\ftpSim\obj\Debug\net6.0\ftpSim.pdb
+C:\share\nipponpaint\3.pg\ftpDLL\ftpSim\ftpSim\obj\Debug\net6.0\ftpSim.genruntimeconfig.cache
+C:\share\nipponpaint\3.pg\ftpDLL\ftpSim\ftpSim\obj\Debug\net6.0\ref\ftpSim.dll

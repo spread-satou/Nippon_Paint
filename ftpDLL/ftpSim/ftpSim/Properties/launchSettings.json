@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ftpSim": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

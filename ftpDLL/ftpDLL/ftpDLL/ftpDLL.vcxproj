@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{ebce16ab-1458-4444-8685-32df5f52550b}</ProjectGuid>
+    <RootNamespace>ftpDLL</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;FTPDLL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;FTPDLL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;FTPDLL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y /d "$(OutDir)ftpDLL.dll" "$(SolutionDir)..\ftpApp\ftpApp\bin\Debug\net6.0"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;FTPDLL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="csInterface.h" />
+    <ClInclude Include="def_buffer.h" />
+    <ClInclude Include="def_dbg.h" />
+    <ClInclude Include="def_replies.h" />
+    <ClInclude Include="ecode.h" />
+    <ClInclude Include="filename.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="ftpcmd.h" />
+    <ClInclude Include="ftplog.h" />
+    <ClInclude Include="ftpParams.h" />
+    <ClInclude Include="ftpseq.h" />
+    <ClInclude Include="ftpsocket.h" />
+    <ClInclude Include="ftpsocket_ctrl.h" />
+    <ClInclude Include="ftpsocket_tran.h" />
+    <ClInclude Include="logmsg.h" />
+    <ClInclude Include="order.h" />
+    <ClInclude Include="params.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="reply.h" />
+    <ClInclude Include="seqcdup.h" />
+    <ClInclude Include="seqcwd.h" />
+    <ClInclude Include="seqlist.h" />
+    <ClInclude Include="seqlogin.h" />
+    <ClInclude Include="seqlogout.h" />
+    <ClInclude Include="seqnlst.h" />
+    <ClInclude Include="seqpasv.h" />
+    <ClInclude Include="seqport.h" />
+    <ClInclude Include="seqpwd.h" />
+    <ClInclude Include="seqrestart.h" />
+    <ClInclude Include="seqretr.h" />
+    <ClInclude Include="seqstor.h" />
+    <ClInclude Include="seqstor2.h" />
+    <ClInclude Include="seqsyst.h" />
+    <ClInclude Include="seqtype.h" />
+    <ClInclude Include="seqwaiting.h" />
+    <ClInclude Include="thr_function.h" />
+    <ClInclude Include="thr_launcher.h" />
+    <ClInclude Include="thr_semaphore.h" />
+    <ClInclude Include="util_file.h" />
+    <ClInclude Include="util_findfile.h" />
+    <ClInclude Include="util_fullpath.h" />
+    <ClInclude Include="util_localtime.h" />
+    <ClInclude Include="util_mktime.h" />
+    <ClInclude Include="util_orderstr.h" />
+    <ClInclude Include="util_strtok.h" />
+    <ClInclude Include="winec.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="csInterface.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="ecode.cpp" />
+    <ClCompile Include="filename.cpp" />
+    <ClCompile Include="ftpcmd.cpp" />
+    <ClCompile Include="ftplog.cpp" />
+    <ClCompile Include="ftpseq.cpp" />
+    <ClCompile Include="ftpsocket.cpp" />
+    <ClCompile Include="ftpsocket_ctrl.cpp" />
+    <ClCompile Include="ftpsocket_tran.cpp" />
+    <ClCompile Include="logmsg.cpp" />
+    <ClCompile Include="order.cpp" />
+    <ClCompile Include="params.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="reply.cpp" />
+    <ClCompile Include="seqcdup.cpp" />
+    <ClCompile Include="seqcwd.cpp" />
+    <ClCompile Include="seqlist.cpp" />
+    <ClCompile Include="seqlogin.cpp" />
+    <ClCompile Include="seqlogout.cpp" />
+    <ClCompile Include="seqnlst.cpp" />
+    <ClCompile Include="seqpasv.cpp" />
+    <ClCompile Include="seqport.cpp" />
+    <ClCompile Include="seqpwd.cpp" />
+    <ClCompile Include="seqrestart.cpp" />
+    <ClCompile Include="seqretr.cpp" />
+    <ClCompile Include="seqstor.cpp" />
+    <ClCompile Include="seqstor2.cpp" />
+    <ClCompile Include="seqsyst.cpp" />
+    <ClCompile Include="seqtype.cpp" />
+    <ClCompile Include="seqwaiting.cpp" />
+    <ClCompile Include="thr_function.cpp" />
+    <ClCompile Include="thr_launcher.cpp" />
+    <ClCompile Include="thr_semaphore.cpp" />
+    <ClCompile Include="util_file.cpp" />
+    <ClCompile Include="util_findfile.cpp" />
+    <ClCompile Include="util_fullpath.cpp" />
+    <ClCompile Include="util_localtime.cpp" />
+    <ClCompile Include="util_mktime.cpp" />
+    <ClCompile Include="util_orderstr.cpp" />
+    <ClCompile Include="util_strtok.cpp" />
+    <ClCompile Include="winec.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

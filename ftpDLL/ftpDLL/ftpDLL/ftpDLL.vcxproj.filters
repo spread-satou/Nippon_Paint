@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ソース ファイル\sequence">
+      <UniqueIdentifier>{2b54a670-334a-41ba-9ddc-18d7aea00765}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\thread">
+      <UniqueIdentifier>{d96d38ae-888d-4e9d-ae60-5384a906379f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\sequence">
+      <UniqueIdentifier>{a4787cc8-c0bc-471a-818e-2e8a7eb02b8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\thread">
+      <UniqueIdentifier>{e5842a81-c9f5-43af-b5c1-d11479bcf8c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\utility">
+      <UniqueIdentifier>{87232dd1-feff-409e-94da-f6e74830ecac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\utility">
+      <UniqueIdentifier>{2df25b78-a0d0-4048-a6a2-5e57add99c8f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ftpParams.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="def_buffer.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="def_dbg.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="def_replies.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ecode.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ftpcmd.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ftplog.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ftpseq.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ftpsocket.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ftpsocket_ctrl.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ftpsocket_tran.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="logmsg.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="order.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="params.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="reply.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="winec.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="seqcdup.h">
+      <Filter>ヘッダー ファイル\sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="seqcwd.h">
+      <Filter>ヘッダー ファイル\sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="seqlist.h">
+      <Filter>ヘッダー ファイル\sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="seqlogin.h">
+      <Filter>ヘッダー ファイル\sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="seqlogout.h">
+      <Filter>ヘッダー ファイル\sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="seqnlst.h">
+      <Filter>ヘッダー ファイル\sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="seqpasv.h">
+      <Filter>ヘッダー ファイル\sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="seqport.h">
+      <Filter>ヘッダー ファイル\sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="seqpwd.h">
+      <Filter>ヘッダー ファイル\sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="seqrestart.h">
+      <Filter>ヘッダー ファイル\sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="seqretr.h">
+      <Filter>ヘッダー ファイル\sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="seqstor.h">
+      <Filter>ヘッダー ファイル\sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="seqstor2.h">
+      <Filter>ヘッダー ファイル\sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="seqsyst.h">
+      <Filter>ヘッダー ファイル\sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="seqtype.h">
+      <Filter>ヘッダー ファイル\sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="seqwaiting.h">
+      <Filter>ヘッダー ファイル\sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="thr_function.h">
+      <Filter>ヘッダー ファイル\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="thr_launcher.h">
+      <Filter>ヘッダー ファイル\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="thr_semaphore.h">
+      <Filter>ヘッダー ファイル\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="util_fullpath.h">
+      <Filter>ヘッダー ファイル\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="util_localtime.h">
+      <Filter>ヘッダー ファイル\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="util_mktime.h">
+      <Filter>ヘッダー ファイル\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="util_orderstr.h">
+      <Filter>ヘッダー ファイル\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="util_strtok.h">
+      <Filter>ヘッダー ファイル\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="filename.h">
+      <Filter>ヘッダー ファイル\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="csInterface.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="util_file.h">
+      <Filter>ヘッダー ファイル\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="util_findfile.h">
+      <Filter>ヘッダー ファイル\utility</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ecode.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ftpcmd.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ftplog.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ftpsocket.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ftpsocket_ctrl.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ftpsocket_tran.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="logmsg.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="order.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="params.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="reply.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="winec.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="seqcdup.cpp">
+      <Filter>ソース ファイル\sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="seqcwd.cpp">
+      <Filter>ソース ファイル\sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="seqlist.cpp">
+      <Filter>ソース ファイル\sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="seqlogin.cpp">
+      <Filter>ソース ファイル\sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="seqlogout.cpp">
+      <Filter>ソース ファイル\sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="seqnlst.cpp">
+      <Filter>ソース ファイル\sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="seqpasv.cpp">
+      <Filter>ソース ファイル\sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="seqport.cpp">
+      <Filter>ソース ファイル\sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="seqpwd.cpp">
+      <Filter>ソース ファイル\sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="seqrestart.cpp">
+      <Filter>ソース ファイル\sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="seqretr.cpp">
+      <Filter>ソース ファイル\sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="seqstor.cpp">
+      <Filter>ソース ファイル\sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="seqstor2.cpp">
+      <Filter>ソース ファイル\sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="seqsyst.cpp">
+      <Filter>ソース ファイル\sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="seqtype.cpp">
+      <Filter>ソース ファイル\sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="seqwaiting.cpp">
+      <Filter>ソース ファイル\sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="thr_function.cpp">
+      <Filter>ソース ファイル\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="thr_launcher.cpp">
+      <Filter>ソース ファイル\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="thr_semaphore.cpp">
+      <Filter>ソース ファイル\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="ftpseq.cpp">
+      <Filter>ソース ファイル\sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="util_fullpath.cpp">
+      <Filter>ソース ファイル\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="util_localtime.cpp">
+      <Filter>ソース ファイル\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="util_mktime.cpp">
+      <Filter>ソース ファイル\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="util_orderstr.cpp">
+      <Filter>ソース ファイル\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="util_strtok.cpp">
+      <Filter>ソース ファイル\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="filename.cpp">
+      <Filter>ソース ファイル\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="csInterface.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="util_file.cpp">
+      <Filter>ソース ファイル\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="util_findfile.cpp">
+      <Filter>ソース ファイル\utility</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

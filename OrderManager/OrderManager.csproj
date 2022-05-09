@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E890B1C0-6EB2-4984-A21D-B3A1AD0C74B9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NipponPaint.OrderManager</RootNamespace>
+    <AssemblyName>OrderManager</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmCanType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmCanType.Designer.cs">
+      <DependentUpon>FrmCanType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FrmCapType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmCapType.Designer.cs">
+      <DependentUpon>FrmCapType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FrmCOMPort.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmCOMPort.Designer.cs">
+      <DependentUpon>FrmCOMPort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FrmCCMSimulator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmCCMSimulator.Designer.cs">
+      <DependentUpon>FrmCCMSimulator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FrmCOMSimulator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmCOMSimulator.Designer.cs">
+      <DependentUpon>FrmCOMSimulator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FrmFontSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmFontSelect.Designer.cs">
+      <DependentUpon>FrmFontSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FrmLabelSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmLabelSelection.Designer.cs">
+      <DependentUpon>FrmLabelSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FrmSelectDataNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmSelectDataNumber.Designer.cs">
+      <DependentUpon>FrmSelectDataNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FrmInitialSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmInitialSetting.Designer.cs">
+      <DependentUpon>FrmInitialSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FrmKeyPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmKeyPad.Designer.cs">
+      <DependentUpon>FrmKeyPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FrmLabelEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmLabelEdit.Designer.cs">
+      <DependentUpon>FrmLabelEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FrmOrderClose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmOrderClose.Designer.cs">
+      <DependentUpon>FrmOrderClose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FrmProductCodeMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmProductCodeMaster.Designer.cs">
+      <DependentUpon>FrmProductCodeMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FrmLabelPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmLabelPrint.Designer.cs">
+      <DependentUpon>FrmLabelPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FrmNPProductCodeMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmNPProductCodeMaster.Designer.cs">
+      <DependentUpon>FrmNPProductCodeMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FrmOrderStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmOrderStart.Designer.cs">
+      <DependentUpon>FrmOrderStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FrmSelectLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmSelectLabel.Designer.cs">
+      <DependentUpon>FrmSelectLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FrmLotRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmLotRegister.Designer.cs">
+      <DependentUpon>FrmLotRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FrmOrderCloseSelectItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmOrderCloseSelectItems.Designer.cs">
+      <DependentUpon>FrmOrderCloseSelectItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FrmSelectOrderCloseItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmSelectOrderCloseItems.Designer.cs">
+      <DependentUpon>FrmSelectOrderCloseItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FrmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmSetting.Designer.cs">
+      <DependentUpon>FrmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FrmSetUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmSetUp.Designer.cs">
+      <DependentUpon>FrmSetUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FrmShipping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmShipping.Designer.cs">
+      <DependentUpon>FrmShipping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\CanTypeData.cs" />
+    <Compile Include="ViewModels\CapTypeData.cs" />
+    <Compile Include="ViewModels\CCMSimulatorData.cs" />
+    <Compile Include="ViewModels\LabelEdit.cs" />
+    <Compile Include="ViewModels\LabelTypeData.cs" />
+    <Compile Include="ViewModels\SelectDataNumber.cs" />
+    <Compile Include="ViewModels\InitialSettingData.cs" />
+    <Compile Include="ViewModels\LabelPrintData.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\LotRegister.cs" />
+    <Compile Include="ViewModels\NPProductCodeMasterData.cs" />
+    <Compile Include="ViewModels\OrderStartData.cs" />
+    <Compile Include="ViewModels\ProductCodeMasterData.cs" />
+    <Compile Include="ViewModels\SettingData.cs" />
+    <EmbeddedResource Include="Dialogs\FrmCanType.resx">
+      <DependentUpon>FrmCanType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FrmCapType.resx">
+      <DependentUpon>FrmCapType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FrmCOMPort.resx">
+      <DependentUpon>FrmCOMPort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FrmCCMSimulator.resx">
+      <DependentUpon>FrmCCMSimulator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FrmCOMSimulator.resx">
+      <DependentUpon>FrmCOMSimulator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FrmFontSelect.resx">
+      <DependentUpon>FrmFontSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FrmLabelSelection.resx">
+      <DependentUpon>FrmLabelSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FrmSelectDataNumber.resx">
+      <DependentUpon>FrmSelectDataNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FrmInitialSetting.resx">
+      <DependentUpon>FrmInitialSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FrmKeyPad.resx">
+      <DependentUpon>FrmKeyPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FrmLabelEdit.resx">
+      <DependentUpon>FrmLabelEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FrmLabelPrint.resx">
+      <DependentUpon>FrmLabelPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FrmLotRegister.resx">
+      <DependentUpon>FrmLotRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FrmNPProductCodeMaster.resx">
+      <DependentUpon>FrmNPProductCodeMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FrmOrderClose.resx">
+      <DependentUpon>FrmOrderClose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FrmOrderStart.resx">
+      <DependentUpon>FrmOrderStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FrmProductCodeMaster.resx">
+      <DependentUpon>FrmProductCodeMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FrmSelectLabel.resx">
+      <DependentUpon>FrmSelectLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FrmOrderCloseSelectItems.resx">
+      <DependentUpon>FrmOrderCloseSelectItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FrmSelectOrderCloseItems.resx">
+      <DependentUpon>FrmSelectOrderCloseItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FrmSetting.resx">
+      <DependentUpon>FrmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FrmSetUp.resx">
+      <DependentUpon>FrmSetUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FrmShipping.resx">
+      <DependentUpon>FrmShipping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\NPLogo_JP.bmp" />
+    <None Include="Product_Label\Label_ONE.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NpCommon\NpCommon.csproj">
+      <Project>{38c0c8d0-5e89-449a-8f70-0d58d64c70ec}</Project>
+      <Name>NpCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
