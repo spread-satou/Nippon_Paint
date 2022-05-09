@@ -87,12 +87,6 @@
     <Compile Include="FormControls\ComboBoxEx.Designer.cs">
       <DependentUpon>ComboBoxEx.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormControls\DateTimePickerEx.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="FormControls\DateTimePickerEx.Designer.cs">
-      <DependentUpon>DateTimePickerEx.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormControls\LabelTextButton.cs">
       <SubType>UserControl</SubType>
     </Compile>

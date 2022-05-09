@@ -113,8 +113,7 @@ namespace NipponPaint.NpCommon.Database
                     break;
             }
             // コネクションを開く
-            //_connection = new SqlConnection(@"Persist Security Info=True;Integrated Security=SSPI;Data Source=NOTEPC-MIEDA¥SQLEXPRESS,1433;Initial Catalog=NP_MAIN");
-            _connection = new SqlConnection(@"Persist Security Info=True;Integrated Security=SSPI;Data Source=DESKTOP-SATOU\SQLEXPRESS,49172;Initial Catalog=NP_MAIN");
+            _connection = new SqlConnection(catalog);
             _connection.Open();
             if (transatctionUse == TransactionUse.Yes)
             {
